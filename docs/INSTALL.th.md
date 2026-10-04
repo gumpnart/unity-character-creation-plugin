@@ -1,6 +1,6 @@
 # ติดตั้งและอัปเดต Unity Character Creation ใน Codex Desktop
 
-Plugin: `unity-character-creation-plugin` · Version: `2.0.0` · 13 skills
+Plugin: `unity-character-creation-plugin` · Version: `2.0.1` · 13 skills
 
 ## ติดตั้งจาก source repository
 
@@ -29,7 +29,7 @@ python scripts/validate_plugin.py
 python scripts/open_plugin.py --open
 ```
 
-ตรวจหน้ารายละเอียดว่าเป็นชื่อ `unity-character-creation-plugin` และรุ่น `2.0.0` แล้วใช้ตัวเลือก update/reload ที่แอปมี หากยังแสดงรุ่นเดิม ให้ติดตั้งใหม่จาก marketplace นี้ตาม UI และเริ่ม thread ใหม่ในโปรเจกต์เกม เก็บชื่อ 13 skills เดิมไว้
+ตรวจหน้ารายละเอียดว่าเป็นชื่อ `unity-character-creation-plugin` และรุ่น `2.0.1` แล้วใช้ตัวเลือก update/reload ที่แอปมี หากยังแสดงรุ่นเดิม ให้ติดตั้งใหม่จาก marketplace นี้ตาม UI และเริ่ม thread ใหม่ในโปรเจกต์เกม เก็บชื่อ 13 skills เดิมไว้
 
 ถ้ามี standalone skills ซ้ำใน `.agents/skills/` ของเกม ให้ตรวจ custom edits ก่อนลบสำเนาซ้ำเมื่อเลือกใช้ plugin
 
@@ -79,3 +79,9 @@ Preserve my master and record the confirmed cause with rendered evidence.
 ```
 
 ตรวจ source joints อย่างต่อเนื่อง และตรวจทุกเฟรมที่ export แล้ว รวมถึงตอนเปลี่ยนทิศ/อุปกรณ์ในเกม ดู [workflow ทั้งหมด](../plugins/unity-character-creation-plugin/README.md) และ [วิธีใช้ Unity tooling](../plugins/unity-character-creation-plugin/skills/character-production-orchestrator/references/unity-plugin.md)
+
+## v2.0.1: ตรวจที่มาและคุณภาพการเคลื่อนไหว
+
+ไม่รับภาพ sprite sheet ที่ AI สร้างทั้งภาพเป็นหลักฐานว่า bake จาก Unity ต้องมี source rig/clip, exporter ที่รันจริง, raw files และ preview ที่ประกอบจากเฟรมเหล่านั้น ตรวจจังหวะ contact/passing, ขาต่อกัน, arm swing, foot sliding และรูปร่าง/ใบหน้าคงที่ ก่อนขยายทิศอื่น
+
+Walk .5 วินาทีเสนอ 8 เฟรมที่ 16 FPS เพื่อเก็บ contact/passing ตรงเวลา หากใช้ 6 เฟรมที่ 12 FPS ต้องตรวจ passing ต้นทางแยกและพิสูจน์ว่าผลเคลื่อนไหวยังอ่านได้ จำนวนเฟรมมากขึ้นไม่ซ่อมท่าที่ผิดให้อัตโนมัติ

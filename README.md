@@ -1,6 +1,6 @@
 # Unity Character Creation — Codex Desktop Plugin
 
-**`unity-character-creation-plugin` · v2.0.0 · 13 skills**
+**`unity-character-creation-plugin` · v2.0.1 · 13 skills**
 
 Create modular 2.5D pixel RPG characters through a hybrid production pipeline:
 
@@ -84,7 +84,7 @@ See the [complete workflow guide](plugins/unity-character-creation-plugin/README
 
 ## Updating from v1
 
-**v2.0.0 changes the default gameplay visual pipeline.** Source bones/clips remain authoring assets; gameplay uses cleaned frame banks rather than live deformation of modular pieces. Installing the plugin does not automatically bake frames, repair artwork or convert a runtime prefab. Follow the [migration guide](plugins/unity-character-creation-plugin/skills/character-production-orchestrator/references/migration-v2.md) in the game project. Add new fields to populated specs rather than replacing them.
+**v2.0.1 changes the default gameplay visual pipeline.** Source bones/clips remain authoring assets; gameplay uses cleaned frame banks rather than live deformation of modular pieces. Installing the plugin does not automatically bake frames, repair artwork or convert a runtime prefab. Follow the [migration guide](plugins/unity-character-creation-plugin/skills/character-production-orchestrator/references/migration-v2.md) in the game project. Add new fields to populated specs rather than replacing them.
 
 Keep the plugin identifier `unity-character-creation-plugin`. For an old clone using the previous repository URL:
 
@@ -127,3 +127,9 @@ python scripts/validate_plugin.py
 ```
 
 This is installable plugin **source**, not a ZIP uploaded to GitHub. The marketplace and manifest follow OpenAI's [plugin examples](https://github.com/openai/plugins) and [plugin schema](https://github.com/openai/plugins/blob/main/.agents/skills/plugin-creator/references/plugin-json-spec.md). Source validation is separate from actual Desktop installation, Unity export and game runtime testing.
+
+## v2.0.1 motion acceptance fix
+
+[Motion and bake acceptance](plugins/unity-character-creation-plugin/skills/character-production-orchestrator/references/motion-acceptance.md) now requires traceable source rig/clip/exporter outputs and timed loop review. Generated action sheets are design references, never Unity bake evidence. Validate connected limb motion, contact/passing, opposite arm phase, head/identity stability and support-foot travel before expanding directions. A proposed eight-frame/16-FPS WalkSouth schedule preserves critical gait keys; increasing count alone cannot fix bad motion. Existing .5s/12-FPS six-frame banks may remain if their actual motion passes review.
+
+For poor v2 outputs, preserve the accepted master and diagnose one locked-direction source/raw/final/runtime loop first. This release tightens workflows and evidence requirements; it does not regenerate the reported screenshot or assert the unseen game's root cause.

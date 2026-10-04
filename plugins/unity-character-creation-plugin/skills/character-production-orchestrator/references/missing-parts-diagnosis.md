@@ -88,3 +88,7 @@ Write observed cause, discriminating check, affected revisions and before/after 
 ## Report the conclusion accurately
 
 Distinguish symptom, suspected cause, confirmed cause, applied fix and retest result. For example, "SW knee gap at t=0.18; confirmed source overlap insufficient at the approved bend; shin art extended; fixed-SW and South↔SW tests passed with captures" is evidence-backed. "Looks like rigging" without a discriminating check is a hypothesis. Plugin workflow improvements are not proof that the user's current prefab has been repaired.
+
+## Poor multi-direction contact sheets
+
+A screenshot alone cannot establish generation method, source provenance or exact runtime timing. Use [motion acceptance](motion-acceptance.md) to distinguish identity drift/stiff gait from bake/import/playback defects. Recover one action/direction with an actual source and final timed loop rather than regenerating the entire sheet.

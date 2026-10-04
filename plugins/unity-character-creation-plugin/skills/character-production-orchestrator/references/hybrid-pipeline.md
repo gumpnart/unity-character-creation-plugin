@@ -40,3 +40,5 @@ Items declare replacement versus overlay. A chest armor can replace Clothing_Upp
 ## Completion gates
 
 Source clip creation alone is incomplete. Require real bake PNGs, inspected/cleaned final frames, imported bank mappings, coherent clothing coverage and actual layered game playback. Discrete frame inspection catches static holes; continuous gameplay catches desynchronization, phase jumps, masks/order errors and marker mistakes. The plugin's source validation checks structure, not Unity rendering or actual asset quality.
+
+Read [motion acceptance](motion-acceptance.md) before batch production. A generative action sheet does not satisfy this pipeline. Source clip, actual exporter execution, raw files, preserved identity and timed motion review are required evidence.

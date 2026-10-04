@@ -50,4 +50,6 @@ These are starting values, not generated art or a prevalidated clip. Run native-
 
 ## Hybrid frame output
 
-The five-key walk table is the editable skeletal source, not a requirement to export exactly five images. Record a common bake sample schedule in FRAME_BANK_SPEC.md (for example six loop frames at 12 FPS for a 0.5-second walk). Inspect and clean every final frame. All body/item passes sample the same source pose times; semantic action markers stay on the shared timeline and are dispatched even when a render update skips frames. See [bake and cleanup](bake-and-cleanup.md).
+The five-key walk table is the editable skeletal source, not a requirement to export exactly five images. Record a common bake sample schedule in FRAME_BANK_SPEC.md (prefer a phase-aligned eight-frame/16-FPS baseline for the 0.5-second walk; lower counts need motion evidence). Inspect and clean every final frame. All body/item passes sample the same source pose times; semantic action markers stay on the shared timeline and are dispatched even when a render update skips frames. See [bake and cleanup](bake-and-cleanup.md).
+
+A pose table describes intent, not a validated walk. Require connected thigh/shin/foot trajectories, opposite leg contacts and passing, support-foot travel compatible with gameplay speed, opposing arm phase and a timed preview. Use the [motion acceptance gate](motion-acceptance.md); do not extend all eight directions while the baseline is stiff or incoherent.

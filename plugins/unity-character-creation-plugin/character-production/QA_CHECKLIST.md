@@ -56,3 +56,13 @@ Unchecked entries are pending, not proof of failure or success.
 | Check / incident | Input revision | Evidence / confirmed cause | Fix and retest | Status / blocker |
 | --- | --- | --- | --- | --- |
 | TBD | TBD | TBD | TBD | pending |
+
+## Motion and provenance regression checks
+
+- [ ] Real source rig/clip and exporter execution inspected; generated sheet is not misreported as a bake.
+- [ ] Ordered raw/final frames and labeled review sheet have traceable source times.
+- [ ] Timed source/final/runtime previews are generated from actual clips/files and reviewed.
+- [ ] Both contact and passing phases readable; whole connected legs articulate, arms track the approved gait.
+- [ ] Ground travel/support-foot motion, source segment length and head/face/garment stability inspected.
+- [ ] One direction works before batch expansion; each added view receives its own motion verdict.
+- [ ] Screenshot-only diagnosis lists observable concerns separately from unconfirmed causes.

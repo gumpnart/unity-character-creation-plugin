@@ -69,7 +69,7 @@ Fixed camera / render pass and occluder layout revision: TBD
 Requested export FPS / actual FPS / sample times / frame count: TBD
 Loop sampling: t_i = i * duration / N, i = 0..N-1; do not export a duplicate endpoint
 One-shot sampling and terminal hold: explicitly record endpoint policy
-WalkSouth reference: 5 source keys at 0/.125/.250/.375/.500; proposed 12 FPS gives 6 unique loop frames at 0/1⁄12/2⁄12/3⁄12/4⁄12/5⁄12, duration .5 seconds
+WalkSouth reference: 5 source keys at 0/.125/.250/.375/.500; proposed 16 FPS gives 8 unique loop samples, duration .5 seconds. An alternative 12-FPS export gives 6 samples at 0/1⁄12/2⁄12/3⁄12/4⁄12/5⁄12 and skips exact passing keys.
 These are different counts. Choose FPS for the approved visual style; do not promise smoothness from FPS alone.
 Raw bank / final cleaned bank / metadata paths: TBD
 Pixel cleanup revisions / every-frame acceptance evidence: TBD
@@ -78,3 +78,14 @@ One action timeline drives Body/Hair/Clothing/Armor/Weapon; per-layer timing mus
 Every-frame bank/import/runtime acceptance: pending
 
 The 1/60-second sampling requirement above diagnoses the continuous source rig. Final banks require review of EVERY exported frame plus continuous layered runtime playback. FRAME_BANK_SPEC.md records authoritative output scheduling and layer alignment; source curves are not runtime bone tracks in the default pipeline.
+
+## Source motion acceptance before batch baking
+
+Source timed loop / contact and passing evidence / actual clip binding paths: TBD
+Leg A/B mapping / connected limb and opposite arm trajectories: TBD
+Stride / gameplay speed / support-ground sweep convention and sliding test: TBD
+Head/body shape stability / declared bob / joint-scale tolerances: TBD
+Phase-aligned proposed WalkSouth export: .5s, 8 frames, 16 FPS at 0/.0625/.125/.1875/.25/.3125/.375/.4375
+Alternative sample schedule and phase-readability evidence: TBD
+Selected action schedule / source-motion verdict / downstream expansion status: TBD / pending / blocked until motion acceptance
+No frame count proves a good walk. Other actions use their own critical phases and timing.

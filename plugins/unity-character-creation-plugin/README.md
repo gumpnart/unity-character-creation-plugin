@@ -1,4 +1,4 @@
-# Unity Character Creation skill pack — v2.0.0
+# Unity Character Creation skill pack — v2.0.1
 
 13 Codex workflows for hybrid Unity 2.5D pixel RPG characters. Default `pipeline_mode: hybrid-baked-frames` uses a shared skeleton to author poses, then exports registered layers for pixel cleanup and synchronized runtime frame playback. Supports eight directions and arbitrary action IDs. Start with a complete South slice, then expand requested coverage.
 
@@ -28,7 +28,7 @@ A new master is a neutral South character with balanced feet, both arms/legs rea
 
 Retain 18 source pieces and the shared 21-bone hierarchy described in [production-contract.md](skills/character-production-orchestrator/references/production-contract.md). They are authoring assets, not a requirement for 18 gameplay renderers. Fix joint gaps in overlapping source art rather than excessive mesh deformation. Equipment sockets are Weapon_R, Weapon_L, HeadEquipment, ChestEquipment, BackEquipment and WaistEquipment.
 
-Source WalkSouth keeps .000 Contact A → .125 Passing A → .250 Contact B → .375 Passing B → .500 Contact A. Physical legs never switch identities and arms swing subtly opposite. Five source keys are not five exported frames: at a proposed 12 FPS, a .5-second loop has six unique samples and omits its duplicated endpoint. Choose the final rate based on visual review.
+Source WalkSouth keeps .000 Contact A → .125 Passing A → .250 Contact B → .375 Passing B → .500 Contact A. Physical legs never switch identities and arms swing subtly opposite. Five source keys are not five exported frames: a proposed eight-frame/16-FPS schedule includes all four gait phase keys and omits its duplicated endpoint. Six frames at 12 FPS skip exact passing keys and need separate motion review. Counts alone never prove gait quality.
 
 ## Runtime and equipment
 

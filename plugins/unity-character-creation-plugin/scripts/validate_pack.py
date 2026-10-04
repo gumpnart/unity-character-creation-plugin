@@ -25,6 +25,7 @@ def main():
         assert all(spec in text for spec in ('CHARACTER_SPEC.md', 'DIRECTION_SPEC.md',
                    'ANIMATION_SPEC.md', 'EQUIPMENT_SPEC.md', 'FRAME_BANK_SPEC.md', 'QA_CHECKLIST.md')), path
         assert 'hybrid-baked-frames' in text, path
+        assert 'motion-acceptance.md' in text, path
         # Resolve shared reference paths for both repository and installed sibling layout.
         base = path.parent
         for relative in ('../character-production-orchestrator/references/production-contract.md',

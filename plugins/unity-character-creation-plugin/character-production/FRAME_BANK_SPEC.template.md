@@ -76,3 +76,15 @@ Continuous playback, loop seam, direction switch and equipment swap: pending / T
 Source change invalidation and stale bank list: TBD
 Confirmed defect stage: source pose / raw bake / pixel cleanup / import / runtime selection (choose using evidence)
 Revision history / blockers / next task: TBD
+
+## Motion and production-origin acceptance
+
+Production origin: actual Unity rig/clip bake / inspected design reference / other explicit pipeline (choose honestly)
+Source rig/clip asset paths, GUIDs and revisions: TBD
+Exporter implementation path/revision / actual execution log path: TBD
+Ordered raw output files and pose/sample mapping: TBD
+Contact-sheet and timed loop preview generated FROM actual bank frames: TBD
+Source gait verdict / raw gait verdict / cleaned gait verdict / runtime gait verdict: pending
+Contact/passing or action-critical phases represented and inspected: pending
+Identity overlay and body/limb/ground motion evidence: TBD
+Generated sheets cannot be accepted as source bake evidence. Receipts/metadata record provenance but do not independently prove authenticity.
